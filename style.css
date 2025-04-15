@@ -194,6 +194,10 @@ section {
 }
 
 .section-2 h2 {
+  font-family: 'Urbanist', sans-serif;
+  font-style: bold,700;
+  font-style: italic;
+  font-size: 90px;
   margin-bottom: 40px;
 }
 
