@@ -5,13 +5,7 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Urbanist', 'Noto Sans KR', sans-serif, ;
-  font-weight: 400;
-  font-style: italic;
-  background-color: #111;
-  color: #fff;
-}
+
 
 /* 헤더 */
 .wehip-bigimg {
@@ -120,8 +114,9 @@ section {
   margin: 0 auto 40px auto;
   padding-right: 20px; 
   color: #1dcd9f;
+  font-family: "urbanist", sans-serif;
   font-size: 80px;
-  font-weight: 700;
+  font-weight: bold,800;
   font-style: italic;
   position: relative;
   transition: all 0.3s ease;
@@ -164,6 +159,7 @@ section {
 .concert-card p {
   margin-top: 12px;
   font-family: 'do Hyeon', sans-serif;
+  font-style: italic;
   font-size: 22px;
   font-weight: 400;
   color: #1dcd9f;
@@ -189,14 +185,65 @@ section {
   cursor: url('./img/click-cursor.png'), pointer;
 }
 
+
+/*    뉴스    */
 .section-2 {
   background-color: #1dcd9f;
-  padding: 100px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
+.section-2 h2 {
+  margin-bottom: 40px;
+}
 
+.slider-wrapper {
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  width: 100%;
+}
 
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 33.3333%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slide-content {
+  background: #1dcd9f;
+  border-top: 6px solid black;
+  border-bottom: 6px solid black;
+  padding: 20px;
+  height: 300px;
+  box-sizing: border-box;
+}
+
+.slide-content p {
+  font-size: 28px;
+  font-family: 'do Hyeon', sans-serif;
+  font-style: italic;
+}
+
+.slide-content span {
+  font-size: 28px;
+  font-family: 'Urbanist', sans-serif;
+  font-style: bold,700,italic;
+}
+
+#sc-p{
+  font-size: 19px;
+}
+
+#sc-p span {
+  font-size: 19px;
+}
+/*   뉴스    */
 .section-3 {
   background-color: #00ADB5; 
 }

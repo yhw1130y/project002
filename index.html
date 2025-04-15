@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <link rel="stylesheet" href="./style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+
 </head>
 <body>
+
+  
     <!--슬라이더큰이미지-->
     <section class="wehip-bigimg"></section>
 
@@ -68,17 +73,91 @@
           </div>
         </div>
       </section>
-
-
-
-      </section>
+      
   
       <!-- 뉴스 슬라이더 (peek preview 슬라이드 예정) -->
       <section class="section-2">
-        <h2>“HIP HOP INSIGHTS”</h2>
+          <h2>section 2</h2>
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="slide">
+                <div class="slide-content">
+                  <p>“루피, 정규 2집 선공개 싱글 <span>'MOVING'</span> 발표”</p>
+                  <br>
+                  <p id="sc-p">루피<span>(Loopy)</span>가 새로운 싱글 <span>"MOVING"</span>을 발표했다. <br>
+                               해당 싱글은 두 번째 정규 앨범 <span>[MARNI]</span>의 선공개 싱글로,<br>
+                               비주얼라이저와 함께 공개됐다. <br> 
+                               해당 영상은 루피의 유튜브 채널에서 감상할 수 있다.</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <p>“최연소로 오스카를 2회 수상한 빌리 아일리시”</p>
+                  <br>
+                  <p id="sc-p">제96회 아카데미 시상식에서 빌리 아일리시 <span>(Billie Eilish)</span>가 <br>
+                               바비<span>(Barbie)</span>의 OST <span>"What Was I Made For"</span>를 통해 '주제가 상'을 수상했다. <br>
+                               2020년, '007 노 타임 투 다이<span>(No Time To Die)</span>'의 OST <span>"No Time To Die"</span>로 이미 오스카상을 수상한 바 있는 그녀는 <br>
+                               이로써 같은 결과를 두 번이나 달성한 최연소 아티스트가 되었다. </p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <p>“식케이, <span>Kc</span> 한국힙합어워즈 5관왕”</p>
+                  <br>
+                  <p id="sc-p">식케이<span>(SIK-K)</span>와 <span>Kc</span> 사단, 그들이 이번 한국힙합어워즈 2025에서 <br>
+                               '올해의 아티스트', '올해의 힙합트랙', '올해의 콜라보', '올해의 뮤직비디오' <br>
+                               '올해의 레이블' 을 수상해 한국힙합어워즈 2025 에서 5관왕을 달성했다 <br>
+                                스윙스와의 디스전으로 저평가 받던 식케이는 결국 5관왕으로 자신을 <br>
+                                증명해보이며 한국힙합 게임 체인져가 되겠다는 의지를 드러냈다.</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <p>“씨잼, 깜짝 선공개 싱글 '레이어드' 공개”</p>
+                  <br>
+                  <p id="sc-p">지난 4일 데자부 그룹<span>(Dejavu Group)</span>과의 계약이 종료된 <br>
+                               씨잼이 선공개 싱글인 '레이어드' 를 공개했다 음반 정보에 따르면 <br>
+                               최근 블랙넛의 본명인 김대웅이 대표자로 있는 신생회사 <br>
+                               '주식회사 최대의' 인것으로 보아 블랙넛의 회사로 씨잼이 입단한 것이라는 <br>
+                              </p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <p>“test test test”</p>
+                  <p id="sc-p">“test test test test test test test test test test test test”</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <p>“test test test”</p>
+                  <p id="sc-p">“test test test test test test test test test test test test”</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <p>“test test test”</p>
+                  <p id="sc-p">“test test test test test test test test test test test test”</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <p>“test test test”</p>
+                  <p id="sc-p">“test test test test test test test test test test test test”</p>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <p>“test test test”</p>
+                  <p id="sc-p">“test test test test test test test test test test test test”</p>
+                </div>
+              </div>
+              <!-- 더 많은 카드 필요 시 추가 -->
+            </div>
+          </div>
+    </section>
+
         
-      </section>
-      
   
       <!-- 앨범 추천 -->
       <section class="section-3"> HYPE ALBUM</section>
@@ -86,6 +165,49 @@
   
     <!-- 푸터 -->
     <footer class="footer"> Footer</footer>
+
+    <script>
+      $(document).ready(function () {
+       let isDragging = false;
+       let startX = 0;
+       let currentTranslate = 0;
+       let currentIndex = 0;
+       let moveX = 0;
+
+       const slider = $(".slider");
+       const slideWidth = $(".slide").outerWidth(true);
+       const totalSlides = $(".slide").length;
+
+  $(".slider-wrapper").on("mousedown touchstart", function(e) {
+    isDragging = true;
+    startX = e.pageX || e.originalEvent.touches[0].pageX;
+  });
+
+  $(document).on("mousemove touchmove", function(e) {
+    if (!isDragging) return;
+    const x = e.pageX || e.originalEvent.touches[0].pageX;
+    moveX = x - startX;
+    slider.css("transform", `translateX(${currentTranslate + moveX}px)`);
+  });
+
+  $(document).on("mouseup touchend", function(e) {
+    if (!isDragging) return;
+    isDragging = false;
+
+    if (Math.abs(moveX) > 50) {
+      if (moveX < 0 && currentIndex < totalSlides - 3) {
+        currentIndex++;
+      } else if (moveX > 0 && currentIndex > 0) {
+        currentIndex--;
+      }
+    }
+
+    currentTranslate = -currentIndex * slideWidth;
+    slider.css("transform", `translateX(${currentTranslate}px)`);
+  });
+});
+  
+    </script>
   
   </body>
   </html> 
