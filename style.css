@@ -84,6 +84,7 @@ section {
 }
 
 .video-text {
+  font-family:"urbanist", sans-serif; 
   font-size: 48px;
   font-weight: 700;
   font-style: italic;
@@ -92,8 +93,7 @@ section {
   color: #1dcd9f;
   text-align: center;
   animation: glitch-video 1.4s infinite, pulse 0.8s infinite ease-in-out;
-
-  margin: 40px 0 20px;
+  margin: 20px 0 20px;
   padding: 0;
 }
 
@@ -104,14 +104,27 @@ section {
 
 
 .section-1 {
+  position: relative;
   background-color: #222;
-  padding: 100px 20px;
+  padding: 160px 20px 100px;
   text-align: center;
+  overflow: hidden;
+}
+
+.section-1::before {
+  content: "";
+  position: absolute;
+  bottom: 0; /* ⬅️ 아래에서 시작하게 변경 */
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom right, transparent 49.5%, #1dcd9f 50%);
+  z-index: 0;
 }
 
 .section-1 h2 {
   max-width: 880px; 
-  margin: 0 auto 40px auto;
+  margin: 0 auto 0 auto;
   padding-right: 20px; 
   color: #1dcd9f;
   font-family: "urbanist", sans-serif;
@@ -157,7 +170,7 @@ section {
 }
 
 .concert-card p {
-  margin-top: 12px;
+  margin: 12px 0 200px 0;
   font-family: 'do Hyeon', sans-serif;
   font-style: italic;
   font-size: 22px;
@@ -181,15 +194,14 @@ section {
   filter: brightness(1.05);
 }
 
-.concert-card a:hover {
-  cursor: url('./img/click-cursor.png'), pointer;
-}
+
 
 
 /*    뉴스    */
 .section-2 {
   background-color: #1dcd9f;
   padding: 40px 20px 40px;
+  padding-bottom: 200px;
   text-align: center;
 }
 
@@ -199,6 +211,7 @@ section {
   font-style: italic;
   font-family: 'Urbanist', sans-serif;
   color: #222;
+  margin: 100px 0 50px 0;
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
@@ -268,28 +281,44 @@ section {
 
 .section-3 h2 {
   font-size: 80px;
-  font-weight: bold;
-  margin-bottom: 40px;
-  font-family: 'Urbanist', sans-serif;
-  font-style:bold,700;
+  font-weight: 700;
   font-style: italic;
+  font-family: 'Urbanist', sans-serif;
   color: #222;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 640px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 10px 0;
+  text-align: center;
 }
+
+.section-3 h2:hover {
+  background-color: #111;
+  color: #1dcd9f;
+  border: 1px solid #111;
+  cursor: pointer;
+  animation: shake 0.3s infinite ease-in-out, glitch-sec3 1s infinite;
+}
+
 
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 열 더 촘촘하게 */
-  gap: 24px;
-  justify-content: center;
+  grid-template-columns: repeat(11, 1fr); 
+  gap: 10px;
   max-width: 1400px;
   margin: 0 auto;
+  transform: translateX(-16px); 
 }
 
 .album-item {
-  width: 300px;
-  height: 300px;
+  width: 340px;
+  height: 340px;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 2px;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -305,23 +334,70 @@ section {
   transform: scale(1.05);
 }
 
-/* 정확한 계단식 위치 수동 지정 */
-.item1 { grid-column: 3; grid-row: 1; }
-.item2 { grid-column: 4; grid-row: 1; }
-.item3 { grid-column: 5; grid-row: 1; }
-.item4 { grid-column: 6; grid-row: 1; }
+.item1  { grid-column: 3; grid-row: 1; }
+.item2  { grid-column: 4; grid-row: 1; }
+.item3  { grid-column: 5; grid-row: 1; }
+.item4  { grid-column: 6; grid-row: 1; }
 
-.item5 { grid-column: 4; grid-row: 2; }
-.item6 { grid-column: 6; grid-row: 2; }
+.item5  { grid-column: 4; grid-row: 2; }
+.item6  { grid-column: 6; grid-row: 2; }
 
-.item7 { grid-column: 3; grid-row: 3; }
-.item8 { grid-column: 5; grid-row: 3; }
+.item7  { grid-column: 3; grid-row: 3; }
+.item8  { grid-column: 5; grid-row: 3; }
+
+.item9  { grid-column: 4; grid-row: 4; }
+.item10 { grid-column: 5; grid-row: 4; }
 
 .footer {
-  background-color: #000000;
-  font-size: 20px;
+  background-color: #1a1a1a;
+  color: #1dcd9f;
+  padding: 60px 40px;
+  font-family: 'Urbanist', sans-serif;
 }
 
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 110px;
+  font-style: italic;
+  font-weight: 800;
+  transform: rotate(-4deg);
+  color: #1dcd9f;
+  margin-bottom: 100px;
+  gap: 10px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-left p {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 6px 0;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-right i {
+  font-size: 24px;
+  color: #1dcd9f;
+  margin-left: 16px;
+  transition: transform 0.2s;
+}
+
+.footer-right i:hover {
+  transform: scale(1.2);
+}
 
 
 @media (max-width: 768px) {
@@ -368,11 +444,11 @@ section {
 }
 
 @keyframes glitch-sec2 {
-  0% { text-shadow: 2px 0 #1dcd9f, -2px 0 #fff; }
-  25% { text-shadow: -2px 0 #1dcd9f, 2px 0 #fff; }
-  50% { text-shadow: 2px 0 #1dcd9f, -2px 0 #fff; }
-  75% { text-shadow: -2px 0 #1dcd9f, 2px 0 #fff; }
-  100% { text-shadow: 0 0 transparent; }
+  0% {text-shadow: 2px 0 red, -2px 0 blue; }
+  25% {text-shadow: -2px 0 red, 2px 0 blue; }
+  50% {text-shadow: 2px 0 red, -2px 0 blue; }
+  75% {text-shadow: -2px 0 red, 2px 0 blue; }
+  100% {text-shadow: 0 0 transparent; }
 }
 
 @keyframes shake {
@@ -381,6 +457,14 @@ section {
   40% { transform: translate(1px, -1px); }
   60% { transform: translate(-1px, -2px); }
   80% { transform: translate(2px, 1px); }
+}
+
+@keyframes glitch-sec3 {
+  0% {text-shadow: 2px 0 red, -2px 0 blue; }
+  25% {text-shadow: -2px 0 red, 2px 0 blue; }
+  50% {text-shadow: 2px 0 red, -2px 0 blue; }
+  75% {text-shadow: -2px 0 red, 2px 0 blue; }
+  100% {text-shadow: 0 0 transparent; }
 }
 
 
