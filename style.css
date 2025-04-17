@@ -21,13 +21,40 @@
   position: relative;
 }
 
+.main-textbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #1dcd9f;
+  font-family: 'Urbanist', sans-serif;
+  font-style: italic;
+  z-index: 2;
+}
+
+.main-textbox p {
+  font-size: 42px;
+  font-weight: 500;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.main-textbox span {
+  font-size: 110px;
+  font-weight: 800;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
 
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 80px;
   padding: 5px 16px;
   display: flex;
   justify-content: space-between;
@@ -39,14 +66,17 @@
 }
 
 .logo img {
-  height: 100px;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0 0 40px;
 }
 
 .main-nav ul {
   display: flex;
   list-style: none;
   gap: 70px;
-  margin: 0px 60px;
+  margin: 0px 60px 0px 100px;
+  
 }
 
 .main-nav li {
@@ -98,8 +128,9 @@ section {
 }
 
 .video-wrapper {
+  width: wid;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1905px;
 }
 
 
@@ -141,6 +172,7 @@ section {
   color: #111;
   border: 1px solid #1dcd9f;
   cursor: pointer;
+  clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);
   animation: shake 0.3s infinite ease-in-out, glitch-sec1 1s infinite;
 }
 
@@ -195,8 +227,6 @@ section {
 }
 
 
-
-
 /*    뉴스    */
 .section-2 {
   background-color: #1dcd9f;
@@ -222,6 +252,7 @@ section {
   color: #1dcd9f;
   border: 1px solid #111;
   cursor: pointer;
+  clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);
   animation: shake 0.3s infinite ease-in-out, glitch-sec2 1s infinite;
 }
 
@@ -273,10 +304,36 @@ section {
 }
 /*   뉴스    */
 
-.section-3 {
+/*.section-3 {
   background: linear-gradient(to bottom right, #1dcd9f 50%, #222 50%);
+  background-color: #1dcd9f;
   padding: 100px 40px;
   text-align: center;
+}*/
+.section-3 {
+  background-color: #1dcd9f;
+  position: relative;
+  padding: 100px 40px;
+  margin-bottom: -1px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.diagonal-bg {
+  background-color: #222;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%, 0% 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.section-3 h2,
+.section-3 .album-grid {
+  position: relative;
+  z-index: 1;
 }
 
 .section-3 h2 {
@@ -290,16 +347,16 @@ section {
   z-index: 1;
   display: inline-block;
   width: 640px;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 100px;
   padding: 10px 0;
-  text-align: center;
 }
 
 .section-3 h2:hover {
   background-color: #111;
   color: #1dcd9f;
   border: 1px solid #111;
+  clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%, 0 50px);
   cursor: pointer;
   animation: shake 0.3s infinite ease-in-out, glitch-sec3 1s infinite;
 }
@@ -348,11 +405,39 @@ section {
 .item9  { grid-column: 4; grid-row: 4; }
 .item10 { grid-column: 5; grid-row: 4; }
 
+/*사이드 타이포*/
+.quote-vertical {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  right: 80px; 
+  top: 90%;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 800;
+  font-size: 120px;
+  font-style: italic;
+  color: #1dcd9f;
+  white-space: nowrap;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.quote-vertical.active {
+  opacity: 1;
+}
+/*사이드 타이포*/
+
 .footer {
   background-color: #1a1a1a;
   color: #1dcd9f;
   padding: 60px 40px;
   font-family: 'Urbanist', sans-serif;
+  border-top: none;
+  outline: none;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-logo {
@@ -378,9 +463,14 @@ section {
 }
 
 .footer-left p {
-  font-size: 14px;
+  font-size: 17px;
   opacity: 0.7;
   margin: 6px 0;
+}
+
+.footer-left a {
+  color: #1dcd9f;
+  text-decoration: none;
 }
 
 .footer-right {
