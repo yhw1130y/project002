@@ -307,13 +307,16 @@ section {
 .slide-content p {
   font-size: 28px;
   font-family: 'do Hyeon', sans-serif;
+}
+
+.p-h2 {
   font-style: italic;
 }
 
 .slide-content span {
   font-size: 28px;
   font-family: 'Urbanist', sans-serif;
-  font-style: bold,700,italic;
+  font-style: bold,700;
 }
 
 #sc-p{
