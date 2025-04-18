@@ -9,6 +9,7 @@
 
 
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./meida.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
@@ -30,9 +31,15 @@
     </section>
 
 
-   <!-- 헤더 (슬라이더 위에 겹침) -->
     <header class="site-header">
       <div class="logo"><img src="./img/wehiplogo.png" alt=""></div>
+    
+      <!-- 햄버거 버튼 -->
+      <button class="menu-toggle" onclick="document.querySelector('.main-nav').classList.toggle('active')">
+        ☰ MENU
+      </button>
+    
+      <!-- 네비게이션 -->
       <nav class="main-nav">
         <ul>
           <li><a href="#">국내 힙합</a></li>
@@ -43,7 +50,8 @@
         </ul>
       </nav>
     </header>
-  
+
+
     <main>
       <!--영상 구역-->
       <section class="video-section">
