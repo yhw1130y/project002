@@ -136,7 +136,7 @@ section {
   overflow: hidden;
 }
 
-.video-text {
+/*.video-text {
   font-family:"urbanist", sans-serif; 
   font-size: 48px;
   font-weight: 700;
@@ -148,17 +148,37 @@ section {
   animation: glitch-video 1.4s infinite, pulse 0.8s infinite ease-in-out;
   margin: 20px 0 20px;
   padding: 0;
+}*/
+
+.video-text {
+  font-family: "urbanist", sans-serif;
+  font-size: clamp(20px, 5vw, 48px);
+  font-weight: 700;
+  font-style: italic;
+  white-space: nowrap; 
+  display: inline-block;
+  border-radius: 2px;
+  color: #1dcd9f;
+  text-align: center;
+  animation: glitch-video 1.4s infinite, pulse 0.8s infinite ease-in-out;
+  margin: 20px 0 20px;
+  padding: 0;
 }
 
+
 .video-wrapper {
-  width: wid;
+  
   margin: 0 auto;
   max-width: 1905px;
 }
 
-.video-wrapper iframe {
+/*.video-wrapper iframe {
   width: 83%;
   height: 45vw;
+}*/
+.video-wrapper iframe {
+  width: 90%;
+  height: 60vw;
 }
 
 .section-1 {
@@ -299,6 +319,10 @@ section {
   flex: 0 0 33.3333%;
   box-sizing: border-box;
   padding: 10px;
+}
+
+.slider-arrow {
+  display: none;
 }
 
 .slide-content {
@@ -612,6 +636,49 @@ section {
   }
 }
 
+@media (max-width: 480px) {
+  .video-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .video-text {
+    animation: glitch-video 1.4s infinite;
+  }
+}
+
+/*뉴스*/
+@media (max-width: 1200px) {
+  .slider-arrow {
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 40px;
+    color: #111;
+    z-index: 10;
+    opacity: 0.6;
+    animation: bounceRight 1.2s infinite ease-in-out;
+  }
+}
+
+@keyframes bounceRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+@media (max-width: 1024px) {
+  .slide {
+    flex: 0 0 50%;  /* 두 칸 보이게 */
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 100%;  /* 한 칸 전체 쓰게 */
+  }
+}
+/*뉴스*/
 
 @keyframes shake {
   0%, 100% {transform: translate(0,0);}
