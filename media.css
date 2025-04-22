@@ -126,6 +126,38 @@
   /*뉴스*/
   
   /*앨범*/
+  @media (max-width: 768px) {
+    .section-3 h2 {
+      position: relative;
+      font-size: 0; /* 줄 간격 조정용 */
+      text-align: center;
+      margin: 60px 0;
+      color: transparent; /* 기존 텍스트 숨기기 */
+    }
+  
+    .section-3 h2::before {
+      content: "HYPe";
+      display: block;
+      font-size: 80px;
+      font-weight: 800;
+      font-style: italic;
+      font-family: 'Urbanist', sans-serif;
+      color: #222;
+      line-height: 1.2;
+    }
+  
+    .section-3 h2::after {
+      content: "· AlBum";
+      display: block;
+      font-size: 80px;
+      font-weight: 800;
+      font-style: italic;
+      font-family: 'Urbanist', sans-serif;
+      color: #222;
+      line-height: 1.2;
+    }
+  }
+
   @media (max-width: 1200px) {
     .album-grid {
       display: grid;
