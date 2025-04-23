@@ -3,23 +3,7 @@
       background: pink !important;
     }
   }
-
-
-
-
-
- @media (max-width: 768px) {
-    .section-1 h2:hover, .section-1 h2:active {
-      animation: none;
-      transform: none;
-      background-color: #1dcd9f;
-      color: #111;
-      border: 2px solid #1dcd9f
-    }
-  
-  }
-  
-  
+    
   /*메뉴바*/
   @media (max-width: 1200px) {
     .site-header {
@@ -70,6 +54,8 @@
     }
   }
   /*메뉴바*/
+
+  /*메인큰이미지&텍스트*/
   @media (max-width: 768px) {
     .main-textbox {
       top: 55%; 
@@ -98,19 +84,79 @@
       font-size: 40px;
     }
   }
+  /*메인큰이미지&텍스트*/
+
+  /*비디오*/
+  @media (max-width: 768px) {
+    .video-content {
+      overflow: visible;
+    }
   
-  @media (max-width: 480px) {
+    
+    .video-wrapper {
+      width: 100%;
+      padding: 0;
+    }
+  
+    
+    .video-wrapper iframe {
+      width: 100% !important;
+      height: 56.25vw !important;
+    }
+  }
+
+  @media (max-width: 1200px) {
     .video-text {
-      font-size: 22px;
+      font-size: clamp(28px, 4vw, 42px);
+      animation: glitch-video 1.4s infinite,
+                 pulse 0.8s infinite ease-in-out;
     }
   }
   
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     .video-text {
+      font-size: clamp(24px, 5vw, 32px);
       animation: glitch-video 1.4s infinite;
     }
   }
-  
+
+  @media (max-width: 737px) {
+    .video-content {
+      overflow: visible;    /* ⬅ 부모에서 숨기던 overflow 해제 */
+    }
+    .video-text {
+      /* 줄바꿈 허용 */
+      white-space: normal;
+      /* 더 작게 줄어들도록 최소값 낮춤 */
+      font-size: clamp(18px, 6vw, 24px);
+    }
+  }
+  /*비디오*/
+
+  /*공연 정보*/
+  @media (max-width: 612px) {
+    .section-1 h2 {
+      font-size: 48px !important;
+      color: #1dcd9f !important;
+      animation: none !important;
+      transition: none !important;
+      clip-path: none !important;
+      border: none !important;
+      background: none !important;
+    }
+    .section-1 h2:hover {
+      /* hover 반응도 완전 제거 */
+      animation: none !important;
+      transition: none !important;
+      background: none !important;
+      clip-path: none !important;
+      border: none !important;
+      color: #1dcd9f !important;
+    }
+  }
+  /*공연 정보*/
+
+
   /*뉴스*/
   @media (max-width: 1024px) {
     .slide {
@@ -126,71 +172,7 @@
   /*뉴스*/
   
   /*앨범*/
-  @media (max-width: 768px) {
-    .section-3 h2 {
-      position: relative;
-      font-size: 0; /* 줄 간격 조정용 */
-      text-align: center;
-      margin: 60px 0;
-      color: transparent; /* 기존 텍스트 숨기기 */
-    }
-  
-    .section-3 h2::before {
-      content: "HYPe";
-      display: block;
-      font-size: 80px;
-      font-weight: 800;
-      font-style: italic;
-      font-family: 'Urbanist', sans-serif;
-      color: #222;
-      line-height: 1.2;
-    }
-  
-    .section-3 h2::after {
-      content: "· AlBum";
-      display: block;
-      font-size: 80px;
-      font-weight: 800;
-      font-style: italic;
-      font-family: 'Urbanist', sans-serif;
-      color: #222;
-      line-height: 1.2;
-    }
-  }
 
-  @media (max-width: 1200px) {
-    .album-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      justify-items: center;
-      padding: 0 20px;
-      transform: none;
-    }
-  
-    .album-item {
-      width: 28vw;
-      height: 28vw;
-    }
-  
-    .item1  { grid-column: 1; grid-row: 1; }
-    .item2  { grid-column: 2; grid-row: 1; }
-    .item3  { grid-column: 3; grid-row: 1; }
-  
-    .item4  { grid-column: 1; grid-row: 2; }
-    .item5  { grid-column: 2; grid-row: 2; }
-    .item6  { grid-column: 3; grid-row: 2; }
-  
-    .item7  { grid-column: 1; grid-row: 3; }
-    .item8  { grid-column: 2; grid-row: 3; }
-    .item9  { grid-column: 3; grid-row: 3; }
-  
-    .item10 { grid-column: 2; grid-row: 4; }
-  
-    .quote-vertical {
-      display: none;
-    }
-  }
   
   /* 768px 이하: 2열 정렬 */
   @media (max-width: 768px) {
@@ -216,6 +198,20 @@
     }
   }
   /*앨범*/
+
+  /*푸터*/
+  @media (max-width: 800px) {
+    .footer-logo {
+      font-size: clamp(60px, 10vw, 110px);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .footer-logo {
+      font-size: clamp(40px, 12vw, 88px);
+    }
+  }
+  /*푸터*/
   
   @keyframes shake {
     0%, 100% {transform: translate(0,0);}

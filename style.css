@@ -202,8 +202,7 @@ section {
 
 .section-1 h2 {
   max-width: 880px; 
-  margin: 0 auto 0 auto;
-  padding-right: 20px; 
+  margin: 0 auto 0 auto; 
   color: #1dcd9f;
   font-family: "urbanist", sans-serif;
   font-size: 80px;
