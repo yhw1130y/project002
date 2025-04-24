@@ -1,0 +1,47 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* 모든 섹션 공통 */
+  section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  /* 1) section-1 */
+  .section-1 {
+    background: #1dcd9f;
+    min-height: 200px;
+  }
+  
+  /* 2) info-section1 */
+  .info-section1 {
+    background: aqua;
+    min-height: 200px;
+  }
+  
+  /* 3) info-section2 */
+  .info-section2 {
+    background: skyblue;
+    min-height: 200px;
+  }
+  
+  /* 4) info-section3 */
+  .info-section3 {
+    background: blue;
+    min-height: 200px;
+  }
+  
+  /* 5) section-2 */
+  .section-2 {
+    background: #000;
+    min-height: 200px;
+  }
+  
+  /* 6) section-3 */
+  .section-3 {
+    background: #222;
+    min-height: 200px;
+  }

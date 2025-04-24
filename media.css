@@ -268,3 +268,9 @@
     75% {text-shadow: -2px 0 red, 2px 0 blue; }
     100% {text-shadow: 0 0 transparent; }
   }
+  /******************************서*브*페*이*지*********************************************/
+  @media (max-width: 768px) {
+    section {
+      padding: 40px 0;
+    }
+  }
