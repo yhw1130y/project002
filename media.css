@@ -273,4 +273,14 @@
     section {
       padding: 40px 0;
     }
+  }@media (max-width: 768px) {
+    .sub-textbox h3 {
+      font-size: 22px;
+    }
+    .sub-textbox h4 {
+      font-size: 20px;
+    }
+    .sub-textbox p {
+      font-size: 16px;
+    }
   }

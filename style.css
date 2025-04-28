@@ -426,7 +426,7 @@ section {
   width: 340px;
   height: 340px;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: transform 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
