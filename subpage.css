@@ -11,7 +11,7 @@ html, body {
 
 .sub-slider-1 {
   width: 100%;
-  height: 800px;
+  height: 100%;
   position: relative;
   padding: 0;
 }
@@ -19,16 +19,15 @@ html, body {
 
 .sub-wehip-bigimg {
   width: 100%;
-  height: 100%;
+  height: 60vh;
   position: relative;
   padding: 0 !important;
   background-image: url("./img/sub-bigimg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  backdrop-filter: blur(5px); /* 좀 더 뿌옇게 */
+  backdrop-filter: blur(5px);
   filter: brightness(0.6) contrast(0.9) grayscale(100%);
-    
 }
 
 /*섹션1*/
@@ -44,60 +43,91 @@ html, body {
   text-align: center;
 }
 .sub-wrapper1 h1 {
+  font-family: 'urbanist',sans-serif;
   color: #1dcd9f;
   font-size: 52px;
   margin: 0 0 10px;
 }
 .sub-wrapper1 p {
+  font-family: 'urbanist',sans-serif;
   font-size: 20px;
   color: #1dcd9f;
   margin: 0;
 }
 
-
-.sub-container {
-  width: 1800px;
-  margin: 0 auto 80px;
-  position: relative;
+/*섹션 2*/
+.album-section {
+  max-width: 1800px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 160px;
+  padding: 100px 0;
 }
 
-.sub-img {
-  width: 900px;
-  height: auto;
+.card {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.sub-textbox {
+.card .textbox {
   position: absolute;
-  right: 100px; /* 텍스트박스가 이미지 반 정도 겹치게 */
+  width: 350px;
+  height: 350px;
   background-color: #1dcd9f;
-  padding: 40px;
-  width: 600px;
-  height: auto;
-  box-sizing: border-box;
+  padding: 30px;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
 }
 
-.sub-textbox h3 {
-  font-size: 28px;
-  font-weight: 900;
-  margin-bottom: 20px;
+/* 카드 위치 조정 */
+.left-img {
+  align-self: flex-start;
 }
 
-.sub-textbox h4 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 16px;
+.right-img {
+  align-self: flex-end;
 }
 
-.sub-textbox p {
-  font-size: 18px;
-  font-weight: 400;
+/* 텍스트 박스 위치 */
+.left-img .textbox {
+  right: -175px; /* 350px의 절반만큼 바깥으로 밀기 */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
+.right-img .textbox {
+  left: -175px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
+.textbox h3 {
+  font-size: 29px;
+  text-align: center;
+}
+
+.textbox h4 {
+  font-family: 'urbanist', sans-serif;
+  font-size: 22px;
+  text-align: center;
+}
+
+.textbox p {
+  font-size: 15px;
+  text-align: center;
+}
 
 /* SECTION 5 - END QUOTE */
 .sub-section5 {
@@ -111,6 +141,7 @@ html, body {
   text-align: center;
 }
 .sub-wrapper5 h2 {
+  color: #1dcd9f;
   font-size: 28px;
   font-style: italic;
   margin-bottom: 16px;

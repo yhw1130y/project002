@@ -269,18 +269,38 @@
     100% {text-shadow: 0 0 transparent; }
   }
   /******************************서*브*페*이*지*********************************************/
+
+
+  /*메인 큰 이미지*/
   @media (max-width: 768px) {
-    section {
-      padding: 40px 0;
+    .sub-wehip-bigimg {
+      height: 40vh;
     }
-  }@media (max-width: 768px) {
-    .sub-textbox h3 {
-      font-size: 22px;
+  }
+
+  /*(제목) section 1*/
+  @media (max-width: 768px) {
+    .sub-wrapper1 h1 {
+      font-size: 45px;
     }
-    .sub-textbox h4 {
-      font-size: 20px;
+  
+    .sub-wrapper1 p {
+      font-size: 18px;
     }
-    .sub-textbox p {
-      font-size: 16px;
+  }
+
+  @media (max-width: 430px) {
+    .sub-wrapper1 h1 {
+      font-size: 40px;
+    }
+
+    .sub-wrapper1 p {
+      font-size: 15px;
+    }
+  }
+  /*(리뷰내용) section 5*/
+  @media (max-width: 430px) {
+    .sub-wrapper5 h2 {
+      font-size: 24px;
     }
   }
