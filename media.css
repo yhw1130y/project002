@@ -1,6 +1,6 @@
  @media (max-width: 768px) {
     body {
-      background: pink !important;
+      background: #000 !important;
     }
   }
     
@@ -383,9 +383,50 @@
       left: -100px;
     }
   }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card img {
+      width: 100%;
+      height: auto; /* 또는 height: 400px; */
+      object-fit: cover;
+    }
+  
+    .card .textbox {
+      position: relative;
+      width: 90%;
+      max-width: 260px;
+      height: 260px;
+      margin-top: -160px;
+      left: auto;
+      right: auto;
+      transform: none;
+      padding: 16px;
+      background-color: #1dcd9f;
+    }
+  
+    .textbox h3 {
+      font-size: 16px;
+    }
+  
+    .textbox h4 {
+      font-size: 14px;
+    }
+  
+    .textbox p {
+      font-size: 12px;
+    }
+  }
   /*(리뷰내용) section 5*/
   @media (max-width: 430px) {
     .sub-wrapper5 h2 {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
