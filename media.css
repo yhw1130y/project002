@@ -122,12 +122,10 @@
 
   @media (max-width: 737px) {
     .video-content {
-      overflow: visible;    /* ⬅ 부모에서 숨기던 overflow 해제 */
+      overflow: visible;
     }
     .video-text {
-      /* 줄바꿈 허용 */
       white-space: normal;
-      /* 더 작게 줄어들도록 최소값 낮춤 */
       font-size: clamp(18px, 6vw, 24px);
     }
   }
@@ -145,7 +143,6 @@
       background: none !important;
     }
     .section-1 h2:hover {
-      /* hover 반응도 완전 제거 */
       animation: none !important;
       transition: none !important;
       background: none !important;
